@@ -56,7 +56,7 @@ if (@$_POST['script_type'] == 'contactform') {
 </table>
 
 ";
-		$headers  = "MIME-Version: 1.0\r\n";
+		/*$headers  = "MIME-Version: 1.0\r\n";
 		$headers .= "Content-type: text/html; charset=iso-8859-1\r\n";
 		$headers .= "From: " . $name . ">\r\n";
 		//if(mail($to, $subject, $message, $headers))
@@ -65,7 +65,26 @@ if (@$_POST['script_type'] == 'contactform') {
 		//}
 		mail($to, $subject, $message, $headers); {
 			echo 12;
-		}
+		}*/
+
+			require 'sg/vendor/autoload.php'; // If you're using Composer (recommended)
+
+$email = new \SendGrid\Mail\Mail();
+$email->setFrom("noreply@cassiajames.com", "Cassia-james");
+$email->setSubject($subject);
+$email->addTo($to, "Cassia-james");
+$email->addContent(
+    "text/html", $message
+);
+
+$sendgrid = new \SendGrid('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');
+try {
+    $response = $sendgrid->send($email);
+    echo "Thank you for contacting";
+} catch (Exception $e) {
+    echo 'Caught exception: '. $e->getMessage() ."\n";
+}
+
 	}
 }
 
