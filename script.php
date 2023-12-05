@@ -77,7 +77,7 @@ $email->addContent(
     "text/html", $message
 );
 
-$sendgrid = new \SendGrid('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');
+$sendgrid = new \SendGrid('xxxx-xxxxx-xxxxxx-xxxxxx-xxxxxx');
 try {
     $response = $sendgrid->send($email);
     echo "Thank you for contacting";
