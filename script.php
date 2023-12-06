@@ -81,7 +81,7 @@ if (@$_POST['script_type'] == 'contactform') {
 
 
 if (@$_POST['script_type'] == 'footerform') {
-	$pdfPath =  'images/Cassia.ai.pdf';
+	$pdfPath =  'images/Cassia.ai_Brochure.pdf';
 	// $fileContent = file_get_contents($pdfPath);
 	echo $fileContent;
 	if (trim($_POST['name']) == '') {
