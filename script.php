@@ -20,7 +20,7 @@ if (@$_POST['script_type'] == 'contactform') {
 
 	else {
 
-		$to = "arupa@diggity.us";
+		$to = "pimanop524@gyxmz.com";
 		$subject = "Cassia Contact form";
 		$name = $_POST["name"];
 		$title = $_POST["title"];
@@ -57,7 +57,7 @@ if (@$_POST['script_type'] == 'contactform') {
 		require 'sg/vendor/autoload.php'; // If you're using Composer (recommended)
 
 		$email = new \SendGrid\Mail\Mail();
-		$email->setFrom("noreply@cassia-james", "Cassia-James");
+		$email->setFrom("noreply@cassia.ai", "Cassia-James");
 		$email->setSubject($subject);
 		$email->addTo($to, "Cassia-James");
 		$email->addContent(
@@ -104,7 +104,7 @@ if (@$_POST['script_type'] == 'footerform') {
 
 	else {
 
-		$to = "arupa@diggity.us";
+		$to = "pimanop524@gyxmz.com";
 		$subject = "Cassia Contact form";
 		$name = $_POST["name"];
 		$title = $_POST["title"];
@@ -145,7 +145,7 @@ if (@$_POST['script_type'] == 'footerform') {
 
 
 		$admin_email = new \SendGrid\Mail\Mail();
-		$admin_email->setFrom("noreply@cassia-james", "Cassia-James");
+		$admin_email->setFrom("noreply@cassia.ai", "Cassia-James");
 		$admin_email->setSubject($subject);
 		$admin_email->addTo($to, "Cassia-James");
 		$admin_email->addContent(
