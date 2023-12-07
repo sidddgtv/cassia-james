@@ -64,7 +64,7 @@ if (@$_POST['script_type'] == 'contactform') {
 		    "text/html", $message
 		);
 
-		$sendgrid = new \SendGrid('xxxxx-xxxx-xxxxx-xxxxx-xxxx');
+		$sendgrid = new \SendGrid('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');
 		try {
 		    $response = $sendgrid->send($email);
 		    echo "Thank you for contacting";
@@ -152,7 +152,7 @@ if (@$_POST['script_type'] == 'footerform') {
 		    "text/html", $message
 		);
 
-		$sendgrid = new \SendGrid('xxxxx-xxxx-xxxxx-xxxxx-xxxx');
+		$sendgrid = new \SendGrid('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');
 		try {
 		    $response = $sendgrid->send($admin_email);
 		    echo "Thank you for contacting";
@@ -180,7 +180,7 @@ if (@$_POST['script_type'] == 'footerform') {
 		    "text/html", $userMessage
 		);
 
-		$sendgrid = new \SendGrid('xxxxx-xxxx-xxxxx-xxxxx-xxxx');
+		$sendgrid = new \SendGrid('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');
 		try {
 		    $response = $sendgrid->send($user_email);
 		    echo "Thank you for contacting";
